@@ -41,8 +41,8 @@ public class TestApp {
 
     @BeforeClass
     public static void beforeTest() throws Exception {
-        String s = "ie";
-        switch (s) {
+        String object = System.getProperty("driver");
+        switch (object) {
             case "chrome": {
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
                 driver = new ChromeDriver();
